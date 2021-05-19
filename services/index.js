@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
 
     if (req.method === 'POST') {
       if (req.body && req.body.message) {
-        telegram.answer(req.body.message)
+        await telegram.answer(req.body.message)
         return res.status(200)
       }
 
