@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     if (req.method === 'POST') {
       if (req.body && req.body.message) {
         telegram.answer(req.body.message)
-        return res.sendStatus(200)
+        return res.status(200)
       }
 
       throw new Error('no body message')

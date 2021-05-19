@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
 
       await twitter.updateDatabase()
 
-      res.sendStatus(200)
+      return res.status(200)
     }
 
     throw new Error('method not allowed')
