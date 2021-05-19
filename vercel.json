@@ -1,0 +1,9 @@
+{
+  "builds": [
+    { "src": "services/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+      { "src": "/update", "methods": ["GET"],  "dest": "/services/update.js"},
+      { "src": "/", "methods": ["GET", "POST"],  "dest": "/services/index.js"}
+  ]
+}
